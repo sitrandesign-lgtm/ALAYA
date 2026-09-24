@@ -9,9 +9,9 @@
 @media(max-width:600px){header{padding:20px 24px}.brand{width:76px;gap:6px}.brand-symbol{width:49px;height:32px}.wordmark{width:76px;height:15px}nav{display:none}.header-book{padding:10px 17px;min-height:44px;gap:18px;font-size:9.1px}.hero{height:680px;min-height:0}.hero-photo{object-position:53% center}.hero-copy{top:45%}.hero-copy .eyebrow{font-size:6.3px;letter-spacing:.12em}.hero-copy h1{font-size:53.2px;margin:28px 0}.hero-copy>p:last-child{font-size:9.8px;max-width:300px;margin:auto}.desktop-break{display:none}.hero-side{display:none}.scroll-cue{bottom:28px}.section>.eyebrow{font-size:7px;letter-spacing:.15em;margin-bottom:32px}.section h2{font-size:27.3px;line-height:1.2}.intro{font-size:9.8px;line-height:1.95}.therapy .intro{max-width:300px}.therapy h2 br{display:none}.therapy h2 em{display:block;margin-top:5px}.keywords{flex-direction:column;gap:3px;margin:28px 0 48px;font-size:8.4px}.keywords span+span:before{content:none}.bowl-image img{height:320px}.bowl-image figcaption{font-size:5.6px;letter-spacing:.1em}.philosophy{min-height:660px;padding:50px 18px 70px}.philosophy-mark{margin-top:65px;width:65px;height:42px}.philosophy h2{font-size:40.6px}.values{margin-top:60px;gap:0}.values article{padding:0 9px}.values h3{font-size:15.4px;margin:12px 0}.values p{font-size:7.7px;line-height:1.9}.value-number{font-size:7px}.experiences{padding-left:24px;padding-right:0}.experiences>h2,.experiences>.eyebrow,.experiences>.intro{margin-right:24px}.experiences>.intro{font-size:8.4px}.carousel{margin-top:42px}.track{gap:16px}.slide{flex-basis:calc(100% - 24px);display:flex;flex-direction:column;min-height:0}.slide-photo{height:280px}.slide-copy{padding:40px 28px;min-height:470px}.slide h3{font-size:25.2px}.slide-description{font-size:9.8px}.slide .button{font-size:9.1px;padding:12px 20px;gap:20px}.carousel-controls{margin-right:24px}.experiences>.text-link{margin-right:24px}.booking h2{font-size:38.5px}.booking .intro br{display:none}.booking .intro{max-width:300px}.booking select{font-size:9.8px}footer{margin-top:80px;flex-wrap:wrap;gap:24px;justify-content:space-between}footer p{font-size:11.9px}footer>a:last-child{width:100%;text-align:center}dialog{padding:55px 25px 35px}dialog h2{font-size:25.2px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before{transition:none!important}}
 
 /* Scroll-led Singing Bowl Therapy */
-.therapy-scroll{--therapy-progress:0;--therapy-size:min(53vw,67vh,753px);--therapy-image-height:150vmax;--therapy-image-y:0%;--therapy-heading-opacity:1;--therapy-heading-y:0;--therapy-intro-opacity:0;--therapy-intro-y:14px;--therapy-keywords-opacity:0;--therapy-keywords-y:16px;--therapy-note-opacity:1;height:300vh;position:relative;background:#fafafa;color:#292929}
+.therapy-scroll{--therapy-progress:0;--therapy-size:min(53vw,67vh,753px);--therapy-image-height:150vmax;--therapy-image-y:0%;--therapy-heading-opacity:1;--therapy-heading-y:0;--therapy-intro-opacity:0;--therapy-intro-y:14px;--therapy-keyword-1-opacity:0;--therapy-keyword-2-opacity:0;--therapy-keyword-3-opacity:0;--therapy-keyword-1-y:12px;--therapy-keyword-2-y:12px;--therapy-keyword-3-y:12px;--therapy-note-opacity:1;height:300vh;position:relative;background:#fafafa;color:#292929}
 .therapy-sticky{position:sticky;top:0;height:100vh;min-height:560px;overflow:hidden;display:grid;place-items:center;text-align:center;isolation:isolate}
-.therapy-heading{position:absolute;z-index:3;top:clamp(55px,11vh,105px);left:24px;right:24px;color:#292929;opacity:var(--therapy-heading-opacity);transform:translateY(var(--therapy-heading-y));will-change:transform,opacity}
+.therapy-heading{position:absolute;z-index:3;top:clamp(55px,11vh,105px);left:24px;right:24px;color:#292929;opacity:1;transform:translateY(var(--therapy-heading-y));will-change:transform}
 .therapy-heading .eyebrow{margin-bottom:26px;font-size:7.7px;letter-spacing:.04em}
 .therapy-heading h2{font-size:clamp(12.6px,1.05vw,15.5px);font-weight:400;line-height:1.55;letter-spacing:0}
 .therapy-heading h2 em{font-weight:400}
@@ -19,11 +19,16 @@
 .therapy-mask>img{position:absolute;left:50%;top:50%;width:auto;height:var(--therapy-image-height);max-width:none;object-fit:contain;transform:translate3d(-50%,calc(-50% + var(--therapy-image-y)),0);transform-origin:center;will-change:transform}
 .therapy-copy{position:absolute;z-index:2;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fafafa;padding:28px;text-shadow:none}
 .therapy-intro{width:min(442px,72%);font-size:12.74px;line-height:1.6;opacity:var(--therapy-intro-opacity);transform:translateY(var(--therapy-intro-y));will-change:opacity,transform}
-.therapy-keywords{display:flex;flex-direction:column;margin-top:34px;font-size:10.92px;line-height:1.6;opacity:var(--therapy-keywords-opacity);transform:translateY(var(--therapy-keywords-y));will-change:opacity,transform}
+.therapy-keywords{display:flex;flex-direction:column;margin-top:34px;font-size:10.92px;line-height:1.6}
+.therapy-keywords span{will-change:opacity,transform}
+.therapy-keywords span:nth-child(1){opacity:var(--therapy-keyword-1-opacity);transform:translateY(var(--therapy-keyword-1-y))}
+.therapy-keywords span:nth-child(2){opacity:var(--therapy-keyword-2-opacity);transform:translateY(var(--therapy-keyword-2-y))}
+.therapy-keywords span:nth-child(3){opacity:var(--therapy-keyword-3-opacity);transform:translateY(var(--therapy-keyword-3-y))}
 .therapy-scroll-note{position:absolute;z-index:4;bottom:24px;left:50%;display:flex;flex-direction:column;gap:7px;transform:translateX(-50%);font-size:6.3px;letter-spacing:.18em;opacity:var(--therapy-note-opacity)}
 .therapy-scroll-note span{font-size:14px;line-height:1}
-@media(max-width:600px){.therapy-scroll{height:280vh;--therapy-size:min(82vw,53vh)}.therapy-sticky{min-height:520px}.therapy-heading{top:9vh}.therapy-heading .eyebrow{font-size:6.3px;margin-bottom:18px}.therapy-heading h2{font-size:11.2px;line-height:1.45}.therapy-heading h2 br{display:none}.therapy-heading h2 em{display:block}.therapy-mask{top:59%}.therapy-copy{padding:22px}.therapy-intro{width:min(285px,72%);font-size:9.1px}.therapy-keywords{font-size:7.7px;margin-top:20px}}
-@media(prefers-reduced-motion:reduce){.therapy-scroll{height:auto;min-height:100vh;--therapy-progress:1;--therapy-image-height:95vw;--therapy-intro-opacity:1;--therapy-intro-y:0;--therapy-keywords-opacity:1;--therapy-keywords-y:0}.therapy-sticky{position:relative;min-height:100vh}.therapy-heading{opacity:1;transform:none}.therapy-mask{width:min(82vw,67vh,753px);height:min(82vw,67vh,753px)}.therapy-scroll-note{display:none}}
+@media(max-width:600px){.therapy-scroll{height:280vh;--therapy-size:min(82vw,53vh)}.therapy-sticky{min-height:520px}.therapy-heading{top:9vh}.therapy-heading .eyebrow{font-size:6.3px;margin-bottom:18px}.therapy-heading h2{font-size:11.2px;line-height:1.45}.therapy-heading h2 br{display:none}.therapy-heading h2 em{display:block}.therapy-mask{top:50%}.therapy-copy{padding:22px}.therapy-intro{width:min(285px,72%);font-size:9.1px}.therapy-keywords{font-size:7.7px;margin-top:20px}}
+@media(max-width:600px){html{scroll-padding-top:0}}
+@media(prefers-reduced-motion:reduce){.therapy-scroll{height:auto;min-height:100vh;--therapy-progress:1;--therapy-image-height:95vw;--therapy-intro-opacity:1;--therapy-intro-y:0;--therapy-keyword-1-opacity:1;--therapy-keyword-2-opacity:1;--therapy-keyword-3-opacity:1;--therapy-keyword-1-y:0;--therapy-keyword-2-y:0;--therapy-keyword-3-y:0}.therapy-sticky{position:relative;min-height:100vh}.therapy-heading{opacity:1;transform:none}.therapy-mask{width:min(82vw,67vh,753px);height:min(82vw,67vh,753px)}.therapy-scroll-note{display:none}}
 
 /* Figma typography and Therapy background refinement */
 body{font-weight:350}
@@ -31,3 +36,15 @@ body{font-weight:350}
 .therapy-sticky:before{content:'';position:absolute;z-index:0;inset:0;background:url('assets/therapy-background.png') center 63%/cover no-repeat;opacity:.23;pointer-events:none}
 .therapy-heading,.therapy-scroll-note{color:#fafafa}
 button,.button,.text-link,.menu-item button{font-weight:465;-webkit-text-stroke:.08px currentColor}
+@media(max-width:600px){.philosophy{min-height:auto;padding-bottom:80px}.values{grid-template-columns:1fr;max-width:300px;margin-top:45px}.values article{padding:24px 0}.values article+article{border-left:0;border-top:1px solid var(--line)}.values h3{font-size:20px}.values p{font-size:9px}}
+
+/* Booking contact dialog */
+#booking-dialog{max-width:760px}
+#booking-dialog .booking-dialog-copy{max-width:560px;margin:20px auto 28px}
+.booking-contact-links{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px auto;max-width:600px}
+.booking-contact-links a{min-height:54px;padding:13px 18px;border:1px solid var(--ink);display:flex;align-items:center;justify-content:space-between;gap:14px;color:var(--ink);font-weight:465;text-transform:uppercase;letter-spacing:.08em;transition:background .2s,color .2s}
+.booking-contact-links a:hover,.booking-contact-links a:active{background:var(--ink);color:var(--paper)}
+.booking-contact-links a span{letter-spacing:0;white-space:nowrap}
+.booking-details{margin-top:28px;padding-top:22px;border-top:1px solid var(--line);font-size:9.8px;line-height:1.8}
+.booking-details p+p{margin-top:4px}
+@media(max-width:600px){#booking-dialog{padding-left:22px;padding-right:22px}.booking-contact-links{grid-template-columns:1fr;gap:9px}.booking-contact-links a{min-height:50px}.booking-details{font-size:9.1px}}
