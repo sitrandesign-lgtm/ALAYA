@@ -23,10 +23,11 @@ if(therapy){
     const introOpacity=clamp((progress-.08)*4.5);
     const keywordsOpacity=clamp((progress-.32)*4);
     const noteOpacity=clamp(1-progress*5);
+    const imageProgress=-progress*.3;
     therapy.style.setProperty('--therapy-progress',progress.toFixed(4));
     therapy.style.setProperty('--therapy-size',`${size.toFixed(1)}px`);
-    therapy.style.setProperty('--therapy-image-scale',(1+progress*.07).toFixed(4));
-    therapy.style.setProperty('--therapy-image-brightness',(0.82-progress*.08).toFixed(4));
+    therapy.style.setProperty('--therapy-image-height',`${(coverSize*1.08).toFixed(1)}px`);
+    therapy.style.setProperty('--therapy-image-y',`${(-imageProgress*8).toFixed(3)}%`);
     therapy.style.setProperty('--therapy-heading-opacity',headingOpacity.toFixed(4));
     therapy.style.setProperty('--therapy-heading-y',`${(-34*progress).toFixed(1)}px`);
     therapy.style.setProperty('--therapy-intro-opacity',introOpacity.toFixed(4));
