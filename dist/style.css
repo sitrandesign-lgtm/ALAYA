@@ -23,3 +23,8 @@
 .therapy-scroll-note span{font-size:14px;line-height:1}
 @media(max-width:600px){.therapy-scroll{height:280vh;--therapy-size:min(82vw,53vh)}.therapy-sticky{min-height:520px}.therapy-heading{top:9vh}.therapy-heading .eyebrow{font-size:6.3px;margin-bottom:18px}.therapy-heading h2{font-size:22.4px;line-height:1.45}.therapy-heading h2 br{display:none}.therapy-heading h2 em{display:block}.therapy-mask{top:59%}.therapy-copy{padding:22px}.therapy-intro{width:min(285px,72%);font-size:9.1px}.therapy-keywords{font-size:7.7px;margin-top:20px}}
 @media(prefers-reduced-motion:reduce){.therapy-scroll{height:auto;min-height:100vh;--therapy-progress:1;--therapy-intro-opacity:1;--therapy-intro-y:0;--therapy-keywords-opacity:1;--therapy-keywords-y:0}.therapy-sticky{position:relative;min-height:100vh}.therapy-heading{opacity:1;transform:none}.therapy-mask{width:min(82vw,67vh,753px);height:min(82vw,67vh,753px)}.therapy-scroll-note{display:none}}
+
+/* Figma typography and Therapy background refinement */
+body{font-weight:350}
+.therapy-scroll,.therapy-sticky{background:#fafafa}
+button,.button,.text-link,.menu-item button{font-weight:465;-webkit-text-stroke:.08px currentColor}
