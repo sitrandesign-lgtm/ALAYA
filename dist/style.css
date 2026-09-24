@@ -47,4 +47,6 @@ button,.button,.text-link,.menu-item button{font-weight:465;-webkit-text-stroke:
 .booking-contact-links a span{letter-spacing:0;white-space:nowrap}
 .booking-details{margin-top:28px;padding-top:22px;border-top:1px solid var(--line);font-size:9.8px;line-height:1.8}
 .booking-details p+p{margin-top:4px}
+.mobile-space{display:none}
+@media(max-width:800px){.values .mobile-space{display:inline}}
 @media(max-width:600px){#booking-dialog{padding-left:22px;padding-right:22px}.booking-contact-links{grid-template-columns:1fr;gap:9px}.booking-contact-links a{min-height:50px}.booking-details{font-size:9.1px}}
